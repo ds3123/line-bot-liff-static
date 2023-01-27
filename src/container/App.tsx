@@ -5,6 +5,12 @@ import { useState , useEffect } from 'react' ;
 
 import axios from 'axios' ;
 
+// import {
+//   MenuIcon ,
+//   SearchIcon , 
+//   ShoppingCartIcon
+// } from "@heroicons/react/outline" ;
+
 
 
 const App = () => {
@@ -13,16 +19,12 @@ const App = () => {
 
 
   useEffect( () => {
-    
 
-    axios.get( "http://demo04.cchouse.com.tw/backend/public/index.php/api/basics" ).then( res => {
+    axios.get( "https://fakestoreapi.com/products" ).then( res => {
 
-        const data = res.data ;
-        
-        set_Data( [ ...data , res.data ] )
+        set_Data( res.data )
 
     } )
-     
      
   } , [] ) ;
 
@@ -33,7 +35,7 @@ const App = () => {
 
              <hr className="m-10" />
 
-             基礎 ID : { data[0]?.basic_id }
+             基礎 dd : { data[3]?.id }
 
              
           </div>
