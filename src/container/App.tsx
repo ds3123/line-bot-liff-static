@@ -18,15 +18,8 @@ const App = () => {
     axios.get( "http://demo04.cchouse.com.tw/backend/public/index.php/api/basics" ).then( res => {
 
         const data = res.data ;
-
         
         set_Data( [ ...data , res.data ] )
-
-
-
-        console.log( 'bbb' , data )
-
-
 
     } )
      
@@ -40,7 +33,7 @@ const App = () => {
 
              <hr className="m-10" />
 
-             { data[0]['basic_id'] }
+             基礎 ID : { data[0]?.basic_id }
 
              
           </div>
