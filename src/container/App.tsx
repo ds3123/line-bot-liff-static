@@ -57,7 +57,6 @@ const App = () => {
                     <div className="md:flex items-center">
 
                         {
-
                           pets.map( ( p , i ) => <span key={ i } className="inline-block cursor-pointer mt-5 md:my-0 text-2xl mx-3 px-5 py-3 rounded-full 
                                                         bg-green-100 hover:bg-green-300"> 
                                                   { p.name } ( { p.species } )
