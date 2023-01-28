@@ -33,7 +33,6 @@ const App = () => {
      
   } , [] ) ;
 
-  
    return <div>
 
              <Basic_Header />  
@@ -65,7 +64,6 @@ const App = () => {
                         }
 
                     </div>
-                    
 
                 </div>
 
