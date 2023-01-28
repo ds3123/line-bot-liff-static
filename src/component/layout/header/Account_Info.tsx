@@ -2,6 +2,13 @@ import { useEffect , useState } from 'react';
 import { useLiff } from 'react-liff';
 
 
+import {
+    LogoutIcon ,
+    LoginIcon
+  } from "@heroicons/react/outline" ;
+  
+
+
 // @ 帳戶登入狀態
 const Account_Info = () => {
 
@@ -16,21 +23,25 @@ const Account_Info = () => {
        if ( error ) return <p className="text-red-400"> 發生錯誤 </p>;
        
        // # 載入中 
-       if ( !isReady ) return <p className="text-blue-400"> 載入中 ... </p>;
+       if ( !isReady ) return <p> 載入中 ... </p>;
    
        // # 未登入
        if ( !isLoggedIn ) {
          
-         return <button className="bg-green-400 p-3 rounded-md" onClick = { liff.login as any }>
-                   登入 Line
+         return <button className = "bg-green-400 px-4 py-2 flex items-center text-white rounded-full" 
+                        onClick   = { liff.login as any } >
+                   <LoginIcon className="w-6"/>  
+                   <p className='mx-2 text-lg'> 登入 LINE </p> 
                 </button> ;
        }
  
        // # 已登入 
        return <>
                    <p> 您好 : { displayName }</p>
-                   <button className="bg-green-400 p-3 rounded-md" onClick = { liff.logout } >
-                      登出 Line 
+                   <button className = "bg-green-400 px-4 py-2 flex items-center text-white rounded-full" 
+                           onClick   = { liff.logout } >
+                      <LogoutIcon className="w-6"/>  
+                   <p className='mx-2 text-lg'> 登出 LINE </p> 
                    </button>
               </>;
      

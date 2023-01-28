@@ -24,6 +24,10 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src" ,
+    "**/*.d.ts" ,
+    "***/**/*.d.ts",
+    "**/*.ts",
+    "**/*.tsx", 
   ]
 }
