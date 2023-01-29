@@ -22,7 +22,6 @@ const App = () => {
 
   const [ data , set_Data ] = useState< any[] >( [] )  ;
 
-
   useEffect( () => {
 
     // axios.get( "https://fakestoreapi.com/products" ).then( res => {
@@ -36,7 +35,6 @@ const App = () => {
    return <div>
 
              <Basic_Header />  
-
 
              <main className="max-w-7xl mt-0 mx-auto md:mt-10">
   
@@ -84,9 +82,7 @@ const App = () => {
                         <p className="text-2xl"> 到店方式 :  </p>  
                     </div>  
                   
-                  
                 </div> 
-
 
              </main>
 
